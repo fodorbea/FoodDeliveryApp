@@ -1,15 +1,6 @@
 <template>
-  <h1>${message}</h1>
-  <ul style="list-style-type:none">
-    <li repeat.for="item of menuList">
-      <div>
-        ${item.description} ---- ${item.price} RON <button click.delegate="removeItem(item)">Remove</button>
-      </div>
-      
-    </li>
+  <ul repeat.for="row of router.navigation" style="list-style-type:none">
+    <li class="${row.isActive ? 'active' : ''}"><a href.bind="row.href">${row.title}</a></li>
   </ul>
-  <input type="text" value.bind="newItem" placeholder="Dish Name" />
-  <input type="number" value.bind="price" placeholder="price" />
-  <button click.delegate="addToMenu()">Add</button>
-
+  <router-view></router-view>
 </template>

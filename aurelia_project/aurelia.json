@@ -26,5 +26,17 @@
     "port": 8080,
     "host": "localhost",
     "output": "dist"
+  },
+  "jquery": {
+    "name": "bootstrap",
+    "path": "../node_module/bootsrap/dist",
+    "main": "js/bootstrap.bundlle.min",
+    "deps": [
+      "jquery"
+    ],
+    "exports": "$",
+    "resources": [
+      "css/bootstrap.css"
+    ]
   }
 }

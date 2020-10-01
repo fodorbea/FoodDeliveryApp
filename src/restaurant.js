@@ -1,5 +1,5 @@
 export class Restaurant {
-  constructor(name, adress, menuList) {
+  constructor(name, location, menuList) {
     this.name = name;
     this.adress = adress;
     this.menuList = [];

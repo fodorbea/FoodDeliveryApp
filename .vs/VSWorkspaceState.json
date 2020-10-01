@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\aurelia_project",
     "\\src"
   ],
-  "SelectedNode": "\\src\\restaurant.js",
+  "SelectedNode": "\\src\\app.js",
   "PreviewInSolutionExplorer": false
 }

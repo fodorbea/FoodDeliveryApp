@@ -1,22 +1,15 @@
-import { Dish } from './dish';
+
 export class App {
-  constructor() {
-    this.message = 'Menu';
-    //this.dish = new Dish('Rice', '10');
-    this.menuList = [];
-    this.menuList.push(new Dish('Curry Rice',10));
-    this.menuList.push(new Dish('Shrimp Pasta',25));
-    this.newItem = '';
-    this.price = '';
-  }
 
-  addToMenu() {
-    this.menuList.push(new Dish(this.newItem, this.price));
-  }
-
-  removeItem(item) {
-    this.menuList.splice(this.menuList.indexOf(item), 1);
-
+  configureRouter(config, router) {
+    config.title = 'Aurelia';
+    config.map([
+      { route: '', name: 'home', moduleId: PLATFORM.moduleName('home'), nav: true, title: 'Home' },
+      { route: 'signup', name: 'signup', moduleId: PLATFORM.moduleName('signup'), nav: true, title: 'Signup' },
+      { route: 'login', name: 'login', moduleId: PLATFORM.moduleName('login'), nav: true, title: 'Login' },
+      { route: 'cart', name:'cart', moduleId: PLATFORM.moduleName('cart'), nav: true, title: 'Your cart'}
+    ]);
+    this.router = router;
   }
   
 

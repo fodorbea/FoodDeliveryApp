@@ -1,0 +1,13 @@
+<template>
+  <ul style="list-style-type:none">
+    <li repeat.for="item of menuList">
+      <div>
+        ${item.description} ---- ${item.price} RON <button click.delegate="removeItem(item)">Remove</button>
+      </div>
+
+    </li>
+  </ul>
+  <input type="text" value.bind="newItem" placeholder="Dish Name" />
+  <input type="number" value.bind="price" placeholder="price" />
+  <button click.delegate="addToMenu()">Add</button>
+</template>
