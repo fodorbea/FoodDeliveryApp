@@ -1,17 +1,17 @@
 <template>
   <form role="form" submit.delegate="signup()">
     <label for="name">Name</label>
-    <input type="text" value.bind="name" /><br /><br />
+    <input type="text" value.bind="name" required/><br /><br />
 
     <label for="email">Email</label>
-    <input type="email" value.bind="email" /><br /><br />
+    <input type="email" value.bind="email" required/><br /><br />
 
     <label for="password">Password</label>
-    <input type="password" value.bind="password" /><br /><br />
+    <input type="password" value.bind="password" required /><br /><br />
 
-    <label for="isRestaurantOwner">Do you own a restaurant?</label>
-    <input type="checkbox" id="checkbox" checked.bind = "isOwner" /><br /><br />
+    <label for="isOwner">Do you own a restaurant?</label>
+    <input type="checkbox" checked.bind="isOwner"/><br /><br />
 
-    <button type="submit">Signup</button>
+    <button type="submit">Sign up</button>
   </form>
 </template>

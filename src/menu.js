@@ -18,4 +18,5 @@ export class Menu {
   removeItem(item) {
     this.menuList.splice(this.menuList.indexOf(item), 1);
 
+  }
 }

@@ -11,7 +11,9 @@
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrapper": "^2.3.3",
     "aurelia-router": "^1.7.1",
-    "bootstrap": "^3.4.1"
+    "aurelia-store": "^1.6.0",
+    "bootstrap": "^3.4.1",
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
