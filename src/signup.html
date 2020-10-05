@@ -10,8 +10,39 @@
     <input type="password" value.bind="password" required /><br /><br />
 
     <label for="isOwner">Do you own a restaurant?</label>
-    <input type="checkbox" checked.bind="isOwner"/><br /><br />
+    <input type="checkbox" checked.bind="isOwner"/><br />
 
+    <div if.bind="isOwner == true">
+      <h3>Set up your Restaurant page</h3>
+      <br />
+      <div>
+        <label for="id">Restaurant Id</label>
+        <input type="text" value.bind="restaurantId" /><br /><br />
+
+        <label for="name">Restaurant name</label>
+        <input type="text" value.bind="restaurantName" /><br /><br />
+
+        <label for="location">Location</label>
+        <select value.bind="selectedLocation"><option value="">Choose...</option><option>Cluj-Napoca</option><option>Timisoara</option><option>Bucuresti</option></select> <br /><br />
+      </div>
+
+      <h3>Set up the menu</h3>
+      <br />
+      <ul style="list-style-type:none">
+        <li repeat.for="item of menuList">
+          <div>
+            ${item.description} ---- ${item.price} RON <button click.delegate="removeItem(item)">Remove</button>
+          </div>
+
+        </li>
+      </ul>
+      <label for="newItem">Name - serving size</label>
+      <input type="text" value.bind="newItem" placeholder="Dish Name" />
+      <label for="price">Price</label>
+      <input type="number" value.bind="price" placeholder="price" min="0" />
+      <button click.delegate="addToMenu()">Add</button>
+    </div>
+    <br />
     <button type="submit">Sign up</button>
   </form>
 </template>
